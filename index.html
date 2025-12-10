@@ -1,0 +1,257 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>BeastMusic Band</title> 
+ 
+    <style> 
+        body { 
+            margin: 0; 
+            font-family: Arial; 
+            background: #f5f5f5; 
+        } 
+ 
+        /* Header */ 
+        header { 
+            background: #1f1f1f; 
+            color: white; 
+            text-align: center; 
+            padding: 25px; 
+        } 
+ 
+        /* Navigation */ 
+        nav { 
+            background: #333; 
+            text-align: center; 
+            padding: 12px; 
+        } 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 16px; 
+        } 
+ 
+        /* Container */ 
+        .container { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 20px 0; 
+        } 
+ 
+        /* Section Title */ 
+        h2 { 
+            border-left: 5px solid #ff4757; 
+            padding-left: 10px; 
+        } 
+ 
+        /* Music Player */ 
+        .music-player { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin-bottom: 25px; 
+            text-align: center; 
+        } 
+ 
+        audio { 
+            width: 100%; 
+            margin-top: 10px; 
+        } 
+ 
+        /* Tour Dates */ 
+        .tour-card { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 12px 0; 
+            border-left: 5px solid #ff4757; 
+        } 
+ 
+        /* Merchandise */ 
+        .store { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px; 
+        } 
+        .product { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            text-align: center; 
+        } 
+        .product img, 
+.gallery img, 
+.property-card img { 
+    width: 100%; 
+    height: auto;       /* FULL IMAGE dikhegi */ 
+    object-fit: contain; /* NO CROP */ 
+    border-radius: 50px; 
+} 
+ 
+         
+        .price { 
+            color: #ff4757; 
+            font-size: 20px; 
+            font-weight: bold; 
+        } 
+ 
+        /* Gallery */ 
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px; 
+        } 
+        .gallery img, .gallery video { 
+            width: 100%; 
+            border-radius: 8px; 
+        } 
+ 
+        /* Inquiry Form */ 
+        .contact input, 
+        .contact textarea, 
+        .contact button { 
+            width: 100%; 
+            padding: 10px; 
+            margin-top: 8px; 
+            border-radius: 6px; 
+            border: 1px solid gray; 
+        } 
+        .contact button { 
+            background: #ff4757; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        } 
+ 
+        footer { 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 30px; 
+            color: #777; 
+        } 
+ 
+        @media(max-width: 700px) { 
+            .store, .gallery { 
+                grid-template-columns: 1fr; 
+            } 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <!-- Header --> 
+    <header> 
+        <h1>RockWave Band</h1> 
+        <p>Feel the Vibe • Live the Music        </p> 
+    </header> 
+ 
+    <!-- Navigation --> 
+    <nav> 
+        <a href="#music">Music</a> 
+        <a href="#tour">Tour Dates</a> 
+        <a href="#store">Store</a> 
+        <a href="#gallery">Gallery</a> 
+    </nav> 
+ 
+    <div class="container"> 
+ 
+        <!-- MUSIC PLAYER --> 
+        <section id="music" class="music-player"> 
+            <h2>Listen to Our Latest Track</h2> 
+            <p>“Karwana” — New Single</p> 
+            <audio controls> 
+                <source src="your-music-file.mp3" type="audio/mpeg"> 
+            </audio> 
+        </section> 
+ 
+        <!-- TOUR DATES --> 
+        <section id="tour"> 
+            <h2>Upcoming Tour Dates</h2> 
+ 
+            <div class="tour-card"> 
+                <h3>Mumbai Concert</h3> 
+                <p>Date: 15 March 2025</p> 
+                <p>Venue: Jio Garden</p> 
+            </div> 
+ 
+            <div class="tour-card"> 
+                <h3>Delhi Live Show</h3> 
+                <p>Date: 22 March 2025</p> 
+                <p>Venue: India Habitat Centre</p> 
+            </div> 
+ 
+            <div class="tour-card"> 
+                <h3>Bangalore Night Fest</h3> 
+                <p>Date: 5 April 2025</p> 
+                <p>Venue: UB City Arena</p> 
+            </div> 
+        </section> 
+ 
+        <!-- MERCHANDISE STORE --> 
+        <section id="store"> 
+            <h2>Merchandise Store</h2> 
+ 
+            <div class="store"> 
+ 
+                <div class="product"> 
+                    <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHQlMjBzaGlydHxlbnwwfHwwfHx8MA%3D%3D"> 
+                    <h3>Beast T-Shirt</h3> 
+                    <p class="price">₹799</p> 
+                </div> 
+ 
+                <div class="product"> 
+                    <img src="https://images.unsplash.com/photo-1542406775-ade58c52d2e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvb2RpZXxlbnwwfHwwfHx8MA%3D%3D"> 
+                    <h3>Band Hoodie</h3> 
+                    <p class="price">₹1,499</p> 
+                </div> 
+ 
+                <div class="product"> 
+                    <img src="https://media.istockphoto.com/id/873976612/photo/small-metallic-guitars-las-vegas-souvenirs-key-ring.webp?a=1&b=1&s=612x612&w=0&k=20&c=EvGtLbICRPZqkgMyHgFxp9N9G5GjiWsdSVoLM92xjeI="> 
+                    <h3>Guitar Keychain</h3> 
+                    <p class="price">₹199</p> 
+                </div> 
+ 
+                <div class="product"> 
+                    <img src="https://images.unsplash.com/photo-1596221780522-71f822d9f63b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWMlMjBwb3N0ZXJ8ZW58MHx8MHx8fDA%3D"> 
+                    <h3>Music Poster</h3> 
+                    <p class="price">₹299</p> 
+                </div> 
+ 
+            </div> 
+        </section> 
+ 
+        <!-- GALLERY --> 
+        <section id="gallery" style="margin-top:20px;"> 
+            <h2>Photos & Videos</h2> 
+ 
+            <div class="gallery"> 
+                <img src="https://images.unsplash.com/photo-1502798985865-1ab60332f46c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFyc2hhbGx8ZW58MHx8MHx8fDA%3D"> 
+                <img src="https://images.unsplash.com/photo-1718578060072-2d95619cae90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hcnNoYWxsfGVufDB8fDB8fHww"> 
+ 
+                 
+            </div> 
+        </section> 
+ 
+        <!-- CONTACT FORM --> 
+        <section class="contact" style="margin-top:25px;"> 
+            <h2>Booking & Inquiries</h2> 
+ 
+            <input type="text" placeholder="Your Name"> 
+            <input type="email" placeholder="Email Address"> 
+            <input type="text" placeholder="Phone Number"> 
+            <textarea rows="4" placeholder="Your Message"></textarea> 
+ 
+            <button>Send Inquiry</button> 
+        </section> 
+ 
+    </div> 
+ 
+    <footer> 
+        © 2025 BeastMusic Band — All Rights Reserved 
+    </footer> 
+ 
+</body> 
+</html>
